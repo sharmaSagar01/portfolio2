@@ -1,0 +1,23 @@
+{
+  "name": "projects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "mywebsite": "npm start --prefix mywebsite",
+    "dev": "concurrently \"npm run  server\" \"npm run mywebsite\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix mywebsite && npm run build --prefix mywebsite"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.15"
+  }
+}
